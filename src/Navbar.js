@@ -54,12 +54,12 @@ class Navbar extends Component  {
           <input type="submit" value="Submit Location" />
         </form>
           {this.state.city ? <h4>Location: {this.state.city},  {this.state.state}, {this.state.country}</h4>: null}
+
+        <h3>GEOLocaiton Section</h3>
+
+
       </div>
-    )
-
-  }
-
-}
+    )}}
 
 export default Navbar;
 

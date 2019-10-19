@@ -16,17 +16,17 @@ class App extends Component {
     weatherData: {},
     forecastKey: 'currently'
   }
-
-  componentDidMount() {
-    navigator.geolocation.getCurrentPosition(position => {
-      const {latitude, longitude} = position.coords
-      fetchJsonp(`${APIURL}${latitude},${longitude}`)
-      .then(resp => resp.json())
-      .then(weatherData => this.setState({
-        fetchingData: false,
-        weatherData: weatherData}))
-    });
-  }
+  // turn this off to testing geolcation map
+  // componentDidMount() {
+  //   navigator.geolocation.getCurrentPosition(position => {
+  //     const {latitude, longitude} = position.coords
+  //     fetchJsonp(`${APIURL}${latitude},${longitude}`)
+  //     .then(resp => resp.json())
+  //     .then(weatherData => this.setState({
+  //       fetchingData: false,
+  //       weatherData: weatherData}))
+  //   });
+  // }
 
   reqeuestWeatherData = (lat, lng) => {
     // console.log("openCage DMS data:",lat, lng);
@@ -72,8 +72,12 @@ class App extends Component {
         <header className="App-header">
           <h3>React Weather App</h3>
         </header>
+        <Navbar />
 
-        <div className="App-intro">
+
+
+      {/* turn off following darksky fetch to testing geolocation feature and map*/}
+      <div className="App-intro">
           {fetchingData
             ?
             <img src={logo} className="App-logo" alt="logo" />

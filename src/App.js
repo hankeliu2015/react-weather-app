@@ -14,8 +14,22 @@ class App extends Component {
   state = {
     fetchingData: true,
     weatherData: {},
-    forecastKey: 'currently'
+    forecastKey: 'currently',
+    lat: '',
+    lng: ''
   }
+
+// get current geo lcoation data without fetch darksky
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition(position => {
+      const {latitude, longitude} = position.coords;
+      this.setState({
+        lat: latitude,
+        lng: longitude
+      })
+    });
+  }
+
   // turn this off to testing geolcation map
   // componentDidMount() {
   //   navigator.geolocation.getCurrentPosition(position => {
@@ -72,7 +86,7 @@ class App extends Component {
         <header className="App-header">
           <h3>React Weather App</h3>
         </header>
-        <Navbar />
+        <Navbar latitude={this.state.lat} longitude={this.state.lng}/>
 
 
 

@@ -27,6 +27,7 @@ class App extends Component {
         lat: latitude,
         lng: longitude
       })
+      console.log(position)
     });
   }
 

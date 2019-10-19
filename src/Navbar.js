@@ -31,9 +31,23 @@ class Navbar extends Component  {
       })
       this.props.reqeuestWeatherData(this.state.lat, this.state.lng);
       // debugger
-    })
+    })}
 
+  checkGeoLocation = () => {
+    // e.preventDefault();
+    navigator.geolocation.getCurrentPosition(pos =>  {
+
+      let crd = pos.coords;
+
+      console.log('Your current position is:');
+      console.log(`Latitude : ${crd.latitude}`);
+      console.log(`Longitude: ${crd.longitude}`);
+      console.log(`More or less ${crd.accuracy} meters.`);
+
+    }
+    )
   }
+
   render () {
     return (
       <div>
@@ -55,10 +69,12 @@ class Navbar extends Component  {
         </form>
           {this.state.city ? <h4>Location: {this.state.city},  {this.state.state}, {this.state.country}</h4>: null}
 
-        <h3>GEOLocaiton Section</h3>
+        <h3>GEOLocaiton data from props</h3>
           <p>latitude: {this.props.latitude}</p>
           <p>longitude: {this.props.longitude}</p>
 
+        <h3>GEOLocaiton Data from web api</h3>
+          <button className={"nav-button"} onClick={()=> this.checkGeoLocation()}>Check GEO Location</button>
       </div>
     )}}
 

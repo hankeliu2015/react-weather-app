@@ -7,6 +7,7 @@ import CurrentForecast from './components/currentForecast';
 import MinutelyForecast from './components/minutelyForecast';
 import HourlyForecast from './components/hourlyForecast';
 import DailyForecast from './components/dailyForecast';
+import SimpleMap from './containers/simpleMap';
 
 const APIURL = `https://api.darksky.net/forecast/${process.env.REACT_APP_DARK_SKY_KEY}/` // will get current log and lat from following function
 
@@ -89,6 +90,7 @@ class App extends Component {
         </header>
         <Navbar latitude={this.state.lat} longitude={this.state.lng}/>
 
+        <SimpleMap />
 
 
       {/* turn off following darksky fetch to testing geolocation feature and map*/}

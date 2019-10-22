@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import CurrentPosition from '../components/currentPosition'
 
 const AnyReactComponent = ({ text }) => (
   <div style={{
@@ -34,11 +35,20 @@ class SimpleMap extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           >
-          <AnyReactComponent
+          {/*
+            <AnyReactComponent
             lat={40.7821682}
             lng={-73.9486154}
-            text={'My Test'}
+            text={'You are here'}
             />
+            */}
+
+          <CurrentPosition
+            lat={40.7821682}
+            lng={-73.9486154}
+            text={'You are here'}
+            />
+
         </GoogleMapReact>
 
       </div>

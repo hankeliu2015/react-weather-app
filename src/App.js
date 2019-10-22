@@ -80,17 +80,19 @@ class App extends Component {
   render () {
     const { fetchingData, weatherData, forecastKey } = this.state;
 
+    const center = {lat: this.state.lat, lng: this.state.lng}
     // console.log("Darksky weather data:", weatherData);
     // console.log("State.ForeCastKey Value:",forecastKey);
 
     return (
+
       <div className="App">
         <header className="App-header">
           <h3>React Weather App</h3>
         </header>
         <Navbar latitude={this.state.lat} longitude={this.state.lng}/>
 
-        <SimpleMap  />
+        <SimpleMap center={this.center} zoom={11} />
 
 
       {/* turn off following darksky fetch to testing geolocation feature and map*/}

@@ -11,7 +11,8 @@ const AnyReactComponent = ({ text }) => (
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: '100%',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
+
   }}>
     {text}
   </div>
@@ -25,17 +26,22 @@ class SimpleMap extends Component {
 
   render() {
     return (
-       <GoogleMapReact
-        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_KEY }}
-        defaultCenter={this.props.center}
-        defaultZoom={this.props.zoom}
-      >
-        <AnyReactComponent
-          lat={59.955413}
-          lng={30.337844}
-          text={'Kreyser Avrora'}
-        />
-      </GoogleMapReact>
+      <div className={'map-container'}>
+        <h3>Here is the map</h3>
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_KEY }}
+          defaultCenter={this.props.center}
+          defaultZoom={this.props.zoom}
+          >
+          <AnyReactComponent
+            lat={59.955413}
+            lng={30.337844}
+            text={'Kreyser Avrora'}
+            />
+        </GoogleMapReact>
+
+      </div>
+
     );
   }
 }

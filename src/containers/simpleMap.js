@@ -27,8 +27,8 @@ class SimpleMap extends Component {
 
   render() {
     return (
-      <div className={'map-container'}>
-        <h3>Here is the map</h3>
+      <div style={{ height: '500px', width: '100%' }}>
+        <h4>Google Map React - my current location</h4>
         <GoogleMapReact
           bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_KEY }}
           defaultCenter={this.props.center}

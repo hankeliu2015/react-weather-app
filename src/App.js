@@ -90,7 +90,7 @@ class App extends Component {
         </header>
         <Navbar latitude={this.state.lat} longitude={this.state.lng}/>
 
-        <SimpleMap />
+        <SimpleMap  />
 
 
       {/* turn off following darksky fetch to testing geolocation feature and map*/}

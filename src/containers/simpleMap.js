@@ -35,6 +35,7 @@ class SimpleMap extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           >
+          {/* turn off following component to test child component*/}
           {/*
             <AnyReactComponent
             lat={40.7821682}
@@ -47,6 +48,11 @@ class SimpleMap extends Component {
             lat={40.7821682}
             lng={-73.9486154}
             text={'You are here'}
+            />
+          <CurrentPosition
+            lat={40.712774}
+            lng={-74.006059}
+            text={'City Hall'}
             />
 
         </GoogleMapReact>

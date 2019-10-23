@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-import { CurrentPosition } from '../components/currentPosition.js'
-import { CurrentPositionHover } from '../components/currentPosition.js'
-import { CurrentLocation } from '../components/currentPosition.js'
+// import { CurrentPosition } from '../components/currentPosition.js'
+import { Location } from '../components/location'
 
 const AnyReactComponent = ({ text }) => (
   <div style={{
@@ -54,15 +53,15 @@ class SimpleMap extends Component {
             />
             */}
 
-          <CurrentPositionHover
+          <Location
+            locationName={'City Hall'}
             lat={40.712774}
             lng={-74.006059}
-            text={'City Hall'}
             />
-          <CurrentLocation
+          <Location
+            locationName={'You are here'}
             lat={40.7821682}
             lng={-73.9486154}
-            text={'You are here'}
             />
 
         </GoogleMapReact>

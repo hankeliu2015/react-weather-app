@@ -11,11 +11,18 @@ const CurrentPositon = ({ text }) => (
       alignItems: 'center',
       justifyContent: 'center',
       borderRadius: '100%',
+      border: '5px solid #f44336',
       transform: 'translate(-50%, -50%)',
 
     }}>
     {text}
     </div>
 );
+
+const CurrentPositonHover = {
+  ...CurrentPositon,
+  border: '5px solid #3f51b5',
+  color: '#f44336'
+}
 
 export default CurrentPositon;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-const CurrentPositon = ({ text }) => (
+const CurrentPosition = ({ text }) => (
     <div style={{
       color: 'yellow',
       background: 'blue',
@@ -19,10 +19,20 @@ const CurrentPositon = ({ text }) => (
     </div>
 );
 
-const CurrentPositonHover = {
-  ...CurrentPositon,
-  border: '5px solid #3f51b5',
-  color: '#f44336'
-}
+const CurrentPositionHover = () => (
 
-export default CurrentPositon;
+  <div style={{
+
+      ...CurrentPosition,
+      border: '5px solid #3f51b5',
+      color: '#f44336'
+
+    }}>
+
+  </div>
+
+)
+
+
+// export default CurrentPositon;
+export { CurrentPosition, CurrentPositionHover };

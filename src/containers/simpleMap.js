@@ -28,6 +28,16 @@ class SimpleMap extends Component {
 
 
   render() {
+
+    const createMapOptions= (maps) => {
+      return {
+        panControl: false,
+        mapTypeControl: false,
+        scrollwheel: false,
+        styles: [{ stylers: [{ 'saturation': -100 }, { 'gamma': 0.8 }, { 'lightness': 4 }, { 'visibility': 'on' }] }]
+      }
+    }
+
     return (
       <div style={{ height: '500px', width: '100%' }}>
         <h4>Google Map React - my current location</h4>
@@ -36,6 +46,9 @@ class SimpleMap extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
           layerTypes={['TransitLayer']}
+          options={createMapOptions}
+
+
           >
           {/* turn off following component to test child component*/}
           {/*

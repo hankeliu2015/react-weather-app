@@ -3,22 +3,22 @@ import GoogleMapReact from 'google-map-react';
 // import { CurrentPosition } from '../components/currentPosition.js'
 import { Location } from '../components/location'
 
-const AnyReactComponent = ({ text }) => (
-  <div style={{
-    color: 'white',
-    background: 'grey',
-    padding: '15px 10px',
-    display: 'inline-flex',
-    textAlign: 'center',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: '100%',
-    transform: 'translate(-50%, -50%)',
-
-  }}>
-    {text}
-  </div>
-);
+// const AnyReactComponent = ({ text }) => (
+//   <div style={{
+//     color: 'white',
+//     background: 'grey',
+//     padding: '15px 10px',
+//     display: 'inline-flex',
+//     textAlign: 'center',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//     borderRadius: '100%',
+//     transform: 'translate(-50%, -50%)',
+//
+//   }}>
+//     {text}
+//   </div>
+// );
 
 class SimpleMap extends Component {
   static defaultProps = {
@@ -35,6 +35,7 @@ class SimpleMap extends Component {
           bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_KEY }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
+          layerTypes={['TransitLayer']}
           >
           {/* turn off following component to test child component*/}
           {/*

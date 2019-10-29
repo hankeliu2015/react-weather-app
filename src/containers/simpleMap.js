@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 // import { CurrentPosition } from '../components/currentPosition.js'
 import { Location } from '../components/location'
+import SearchBox from '../components/searchBox.js'
 
 // const AnyReactComponent = ({ text }) => (
 //   <div style={{
@@ -29,7 +30,7 @@ class SimpleMap extends Component {
 
   render() {
 
-    const createMapOptions= (maps) => {
+    function createMapOptions(maps) {
       return {
         panControl: false,
         mapTypeControl: false,
@@ -37,6 +38,8 @@ class SimpleMap extends Component {
         styles: [{ stylers: [{ 'saturation': -100 }, { 'gamma': 0.8 }, { 'lightness': 4 }, { 'visibility': 'on' }] }]
       }
     }
+
+    const _onClick = (x,y,lat, lng, event) => console.log(x,y, lat, lng, event)
 
     return (
       <div style={{ height: '500px', width: '100%' }}>
@@ -47,6 +50,7 @@ class SimpleMap extends Component {
           defaultZoom={this.props.zoom}
           layerTypes={['TransitLayer']}
           options={createMapOptions}
+          onClick={_onClick}
 
 
           >
@@ -67,15 +71,17 @@ class SimpleMap extends Component {
             />
             */}
 
-          <Location
-            locationName={'City Hall'}
-            lat={40.712774}
-            lng={-74.006059}
-            />
+          <SearchBox />
           <Location
             locationName={'You are here'}
             lat={40.7821682}
             lng={-73.9486154}
+            />
+
+          <Location
+            locationName={'City Hall'}
+            lat={40.712774}
+            lng={-74.006059}
             />
 
         </GoogleMapReact>

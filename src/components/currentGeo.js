@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {SubmitButton} from './styleButton.js'
 import {ResetButton} from './styleButton.js'
 import {Wrapper} from './styleButton.js'
+import {CancelButton} from './styleButton.js'
 
 // const Title = styled.h3`
 //   font-size: 1.5 em;
@@ -51,6 +52,7 @@ class CurrentGeo extends Component {
         <p>longitude: {this.props.longitude}</p>
         <SubmitButton>Submit</SubmitButton>
         <ResetButton>Reset</ResetButton>
+        <CancelButton>Cancel</CancelButton>
       </Wrapper>
     )
   }

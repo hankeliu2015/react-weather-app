@@ -24,4 +24,10 @@ const ResetButton = styled.button`
   border-radius: 3px;
   display: inline-block;
 `
-export { SubmitButton, ResetButton, Wrapper };
+
+const CancelButton = styled(SubmitButton)`
+  color: black;
+  border-color: black;
+`
+
+export { SubmitButton, ResetButton, Wrapper, CancelButton };

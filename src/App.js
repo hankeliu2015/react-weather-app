@@ -8,6 +8,7 @@ import MinutelyForecast from './components/minutelyForecast';
 import HourlyForecast from './components/hourlyForecast';
 import DailyForecast from './components/dailyForecast';
 import SimpleMap from './containers/simpleMap';
+import CurrentGeo from './components/currentGeo';
 
 const APIURL = `https://api.darksky.net/forecast/${process.env.REACT_APP_DARK_SKY_KEY}/` // will get current log and lat from following function
 
@@ -91,6 +92,7 @@ class App extends Component {
           <h3>React Weather App</h3>
         </header>
         <Navbar latitude={this.state.lat} longitude={this.state.lng}/>
+        <CurrentGeo latitude={this.state.lat} longitude={this.state.lng}/>
 
         <SimpleMap center={this.center} zoom={11} />
 

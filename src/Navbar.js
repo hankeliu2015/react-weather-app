@@ -67,9 +67,13 @@ class Navbar extends Component  {
         </form>
           {this.state.city ? <h4>Location: {this.state.city},  {this.state.state}, {this.state.country}</h4>: null}
 
-        <h3>Current GEOLocaiton data from props</h3>
+        {/*
+
+          <h3>Current GEOLocaiton data from props</h3>
           <p>latitude: {this.props.latitude}</p>
           <p>longitude: {this.props.longitude}</p>
+
+          */}
 
         <h3>GEOLocaiton Data from web api</h3>
           <button className={"nav-button"} onClick={()=> this.checkGeoLocation()}>Check GEO Location</button>

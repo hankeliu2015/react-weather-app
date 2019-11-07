@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components'
 
 const Title = styled.h3`
 font-size: 1.5 em;
@@ -11,8 +12,6 @@ background: papayawhip;
 `;
 
 class CurrentGeo extends Component {
-
-
 
   render() {
     return (

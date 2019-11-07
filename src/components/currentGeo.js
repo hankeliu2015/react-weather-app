@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import {SubmitButton} from './styleButton.js'
 import {ResetButton} from './styleButton.js'
+import {Wrapper} from './styleButton.js'
 
 // const Title = styled.h3`
 //   font-size: 1.5 em;
@@ -13,10 +14,10 @@ import {ResetButton} from './styleButton.js'
 //   background: papayawhip;
 // `
 
-const Wrapper = styled.div`
-  background: grey;
-  color: white;
-`
+// const Wrapper = styled.div`
+//   background: grey;
+//   color: white;
+// `
 
 // const SubmitButton = styled.button`
 //   color: maroon;

@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+const Wrapper = styled.div`
+  background: grey;
+  color: white;
+`
 const SubmitButton = styled.button`
   color: maroon;
   font-size: 1em;
@@ -20,4 +24,4 @@ const ResetButton = styled.button`
   border-radius: 3px;
   display: inline-block;
 `
-export { SubmitButton, ResetButton };
+export { SubmitButton, ResetButton, Wrapper };

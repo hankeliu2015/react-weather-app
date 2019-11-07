@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import {SubmitButton} from './styleButton.js'
+import {ResetButton} from './styleButton.js'
 
 // const Title = styled.h3`
 //   font-size: 1.5 em;
@@ -16,26 +18,26 @@ const Wrapper = styled.div`
   color: white;
 `
 
-const SubmitButton = styled.button`
-  color: maroon;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  borderL 2px solid;
-  border-radius: 3px;
-  display: inline-block;
-`
+// const SubmitButton = styled.button`
+//   color: maroon;
+//   font-size: 1em;
+//   margin: 1em;
+//   padding: 0.25em 1em;
+//   borderL 2px solid;
+//   border-radius: 3px;
+//   display: inline-block;
+// `
 
-const ResetButton = styled.button`
-  color: tomato;
-  border-color: tomato;
-  font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid;
-  border-radius: 3px;
-  display: inline-block;
-`
+// const ResetButton = styled.button`
+//   color: tomato;
+//   border-color: tomato;
+//   font-size: 1em;
+//   margin: 1em;
+//   padding: 0.25em 1em;
+//   border: 2px solid;
+//   border-radius: 3px;
+//   display: inline-block;
+// `
 
 
 class CurrentGeo extends Component {
@@ -43,7 +45,7 @@ class CurrentGeo extends Component {
   render() {
     return (
       <Wrapper>
-        <h3>Current GEOLocaiton data from props</h3>
+        <h3>Style-Components Test - Current GEOLocaiton data from props</h3>
         <p>latitude: {this.props.latitude}</p>
         <p>longitude: {this.props.longitude}</p>
         <SubmitButton>Submit</SubmitButton>

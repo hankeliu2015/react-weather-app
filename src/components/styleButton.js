@@ -3,7 +3,14 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   background: papayawhip;
   color: white;
-`
+`;
+
+const Title = styled.h1`
+  font-size: 1.5em;
+  text-align: center;
+  color: palevioletred;
+`;
+
 const SubmitButton = styled.button`
   color: maroon;
   font-size: 1em;
@@ -12,7 +19,7 @@ const SubmitButton = styled.button`
   borderL 2px solid;
   border-radius: 3px;
   display: inline-block;
-`
+`;
 
 const ResetButton = styled.button`
   color: tomato;
@@ -23,11 +30,11 @@ const ResetButton = styled.button`
   border: 2px solid;
   border-radius: 3px;
   display: inline-block;
-`
+`;
 
 const CancelButton = styled(SubmitButton)`
   color: black;
   border-color: black;
-`
+`;
 
-export { SubmitButton, ResetButton, Wrapper, CancelButton };
+export { SubmitButton, ResetButton, Wrapper, CancelButton, Title };

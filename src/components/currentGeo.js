@@ -46,14 +46,12 @@ class CurrentGeo extends Component {
 
   render() {
     return (
-      <Wrapper>
+      <div>
         <h3>Style-Components Test - Current GEOLocaiton data from props</h3>
         <p>latitude: {this.props.latitude}</p>
         <p>longitude: {this.props.longitude}</p>
-        <SubmitButton>Submit</SubmitButton>
-        <ResetButton>Reset</ResetButton>
-        <CancelButton>Cancel</CancelButton>
-      </Wrapper>
+
+      </div>
     )
   }
 }

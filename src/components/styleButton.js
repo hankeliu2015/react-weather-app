@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  background: grey;
+  background: papayawhip;
   color: white;
 `
 const SubmitButton = styled.button`

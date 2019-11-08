@@ -16,6 +16,7 @@ const Button = styled.button`
   border-radius: 3px;
   `;
 
+
 class StyleTest1 extends Component {
 
   render() {
@@ -32,6 +33,8 @@ class StyleTest1 extends Component {
         <Button>Normal</Button>
         <Button primary>Primary</Button>
         <Button secondary>Secondary</Button>
+        <br/>
+        <Button as="a" href="/">Link with Button Styles</Button>
       </Wrapper>
     )
   }

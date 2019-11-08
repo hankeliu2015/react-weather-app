@@ -16,7 +16,7 @@ const SubmitButton = styled.button`
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
-  borderL 2px solid;
+  border: 2px solid;
   border-radius: 3px;
   display: inline-block;
 `;

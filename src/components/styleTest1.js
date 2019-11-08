@@ -16,6 +16,16 @@ const Button = styled.button`
   border-radius: 3px;
   `;
 
+const ReversedButton = props => <Button {...props} children={props.children.split('').reverse()} />
+
+const Link = ({ className, children }) => (
+  <a className={className}>{children}</a>
+);
+
+const StyledLink = styled(Link)`
+  color: maroon;
+  font-weight: bold;
+`;
 
 class StyleTest1 extends Component {
 
@@ -35,6 +45,9 @@ class StyleTest1 extends Component {
         <Button secondary>Secondary</Button>
         <br/>
         <Button as="a" href="/">Link with Button Styles</Button>
+        <Button as={ReversedButton}>Customized Button with Button Styles</Button>
+        <br />
+        <StyledLink>Styled, formated Link</StyledLink>
       </Wrapper>
     )
   }

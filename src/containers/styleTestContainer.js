@@ -6,7 +6,9 @@ import {StyleTest1} from '../components/styleTest1'
 class StyleComponentsTest extends Component {
   render() {
     return (
-      <StyleTest1 primary='black' />
+      <div>
+        <StyleTest1 />
+      </div>
     )
   }
 }

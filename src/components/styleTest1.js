@@ -4,18 +4,22 @@ import { Wrapper, SubmitButton, ResetButton, CancelButton, Title} from '../compo
 
 const Button = styled.button`
   /* Adapt the colors based on primary prop */
+
   background: ${props => props.primary ? "palevioletred" : "white"};
-  color: ${props => props.primary ? "white" : "palevioletred"};
+  color: ${props => props.primary ? "white" : "red"};
+  color: ${props => props.secondary ? "red" : "palevioletred"};
 
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
   border: 2px solid palevioletred;
   border-radius: 3px;
-`;
+  `;
 
 class StyleTest1 extends Component {
+
   render() {
+    // debugger
     return (
 
       <Wrapper>
@@ -27,6 +31,7 @@ class StyleTest1 extends Component {
 
         <Button>Normal</Button>
         <Button primary>Primary</Button>
+        <Button secondary>Secondary</Button>
       </Wrapper>
     )
   }

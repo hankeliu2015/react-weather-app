@@ -27,6 +27,16 @@ const StyledLink = styled(Link)`
   font-weight: bold;
 `;
 
+const Input = styled.input`
+  padding: 0.5em;
+  margin: 0.5em;
+  color: ${props => props.inputColor || "red"}
+  background: papayawhip;
+  border: none;
+  border-radius: 3px;
+`;
+
+
 class StyleTest1 extends Component {
 
   render() {
@@ -49,6 +59,9 @@ class StyleTest1 extends Component {
         <br />
         <Link>UnStyled, Unformated Link</Link>
         <StyledLink>Styled, formated Link</StyledLink>
+        <br />
+        <Input type='text' defaultValue="show default color red"/>
+        <Input inputColor="blue" type='text' defaultValue="Overwrite the default color changed to blue"/>
       </Wrapper>
     )
   }

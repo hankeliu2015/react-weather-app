@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  background: papayawhip;
+  background: #dfe6e9;
   color: white;
 `;
 

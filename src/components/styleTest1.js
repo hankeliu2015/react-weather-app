@@ -54,7 +54,7 @@ class StyleTest1 extends Component {
         <Button secondary>Secondary</Button>
 
         <br/>
-        
+
         <Button as="a" href="/">Link with Button Styles</Button>
         <Button as={ReversedButton}>Customized Button with Button Styles</Button>
 

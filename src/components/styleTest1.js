@@ -3,11 +3,10 @@ import styled from 'styled-components';
 import { Wrapper, SubmitButton, ResetButton, CancelButton, Title} from '../components/styleButton'
 
 const Button = styled.button`
-  /* Adapt the colors based on primary prop */
 
-  background: ${props => props.primary ? "palevioletred" : "white"};
+  background: ${props => props.primary ? "yellow" : "white"};
   color: ${props => props.primary ? "white" : "red"};
-  color: ${props => props.secondary ? "red" : "palevioletred"};
+  color: ${props => props.secondary ? "black" : "palevioletred"};
 
   font-size: 1em;
   margin: 1em;
@@ -53,9 +52,12 @@ class StyleTest1 extends Component {
         <Button>Normal</Button>
         <Button primary>Primary</Button>
         <Button secondary>Secondary</Button>
+
         <br/>
+        
         <Button as="a" href="/">Link with Button Styles</Button>
         <Button as={ReversedButton}>Customized Button with Button Styles</Button>
+
         <br />
         <Link>UnStyled, Unformated Link</Link>
         <StyledLink>Styled, formated Link</StyledLink>
